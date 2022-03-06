@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeNow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <svg class="logo" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.009 12.3886C16.238 14.7966 13.61 17.1716 10.65 16.7846C9.849 17.9036 8.955 19.4666 7.962 21.2806L5.666 22.0006C7.609 18.2106 10.203 14.0196 12.986 10.8346C11.781 11.6196 9.801 13.3076 8.078 15.0876C6.524 11.8416 8.163 8.83461 10.536 6.53961C10.469 7.62061 10.949 8.60761 11.308 9.11461C11.246 8.21061 11.352 6.59461 12.012 5.19461C13.335 4.07861 14.504 3.27461 15.841 2.57261C15.624 3.36361 15.808 4.31161 16.063 4.90361C16.179 4.08361 16.666 2.53561 17.23 1.89361C18.897 0.818614 21.365 -0.0423855 24 0.00161449C23.709 1.62461 22.857 4.25961 21.706 5.89461C20.777 6.49161 19.549 6.84061 18.569 7.00961C19.38 7.23761 20.288 7.30262 21.078 7.24462C20.503 8.45162 19.921 9.55561 19.039 10.9106C17.823 11.5896 16.269 11.8886 15.207 11.9456C15.95 12.3346 17.304 12.5626 18.009 12.3886ZM4 21.0006H0V22.0006H4V21.0006Z"
+                    fill="#E8704A" />
+            </svg>
+            <div class="navbar">
+                <img class="close" src="https://img.icons8.com/ios/100/000000/delete-sign--v1.png" />
+                <div class="menu">
+                    <ul>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                    </ul>
+                </div>
+                <div class="start-scheduling">Start Scheduling</div>
+            </div>
+            <div class="hamburger">|||</div>
+        </nav>
+
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Post when your audience is most active</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem similique, facilis eaque nostrum, a
+                    praesentium pariatur, ducimus tenetur reiciendis porro vel veniam totam obcaecati excepturi?</p>
+                <div class="hero-buttons">
+                    <div class="schedule">Start Scheduling</div>
+                    <div class="view-demo">View Demo</div>
+                </div>
+                <div class="info-data-sell">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                            fill="#46C487" />
+                    </svg>
+                    <p>TimeNow does not sell your data</p>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <div class="hero-image">
+        <img src="/Assets/Mockup.png" alt="">
+     </div>
+
+    <section class="testimonials">
+        <div class="influencials">
+            <h1>TimeNow is used by the most influential people</h1>
+            <div class="avatars">
+                <img src="/Assets/UA1.png" alt="">
+                <img src="/Assets/UA2.png" alt="">
+                <img src="/Assets/UA3.png" alt="">
+                <img src="/Assets/UA4.png" alt="">
+                <img src="/Assets/UA5.png" alt="">
+                <img src="/Assets/UA6.png" alt="">
+                <img src="/Assets/UA7.png" alt="">
+                <img src="/Assets/UA8.png" alt="">
+            </div>
+        </div>
+        <div class="influencials-comentarios">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus explicabo suscipit at cum, iusto quos! Recusandae delectus sequi distinctio ab!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ea.</p>
+        </div>
+    </section>
+
+
+    <script>
+        const menu = document.querySelector(".navbar")
+        const close = document.querySelector(".close")
+        const open = document.querySelector(".hamburger")
+
+        open.addEventListener("click", () => {
+            menu.classList.add("nav-open");
+        })
+
+        close.addEventListener("click", () => {
+            menu.classList.remove("nav-open")
+        })
+
+    </script>
+</body>
+
+</html>
