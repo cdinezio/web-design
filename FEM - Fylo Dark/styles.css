@@ -97,6 +97,9 @@ nav ul li {
   border-radius: 25px;
   font-weight: bold;
   margin-bottom: 2em;
+  -webkit-animation: ctaAnimation 3s infinite;
+          animation: ctaAnimation 3s infinite;
+  position: relative;
 }
 
 /*Hero section End*/
@@ -503,6 +506,50 @@ footer .footer-social svg {
   }
   .early-access {
     max-width: 800px;
+  }
+}
+
+@-webkit-keyframes ctaAnimation {
+  25% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+    -webkit-transform: rotate(1grad);
+            transform: rotate(1grad);
+  }
+  50% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+  }
+  75% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+    -webkit-transform: rotate(-1grad);
+            transform: rotate(-1grad);
+  }
+}
+
+@keyframes ctaAnimation {
+  25% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+    -webkit-transform: rotate(1grad);
+            transform: rotate(1grad);
+  }
+  50% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+  }
+  75% {
+    border-radius: 0;
+    -webkit-box-shadow: 0px 5px 20px white;
+            box-shadow: 0px 5px 20px white;
+    -webkit-transform: rotate(-1grad);
+            transform: rotate(-1grad);
   }
 }
 /*# sourceMappingURL=styles.css.map */
