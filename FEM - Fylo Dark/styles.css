@@ -1,0 +1,132 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  /*Background colors*/
+  --main-bg: hsl(218, 28%, 13%);
+  --footer-bg: hsl(216, 53%, 9%);
+  --testimonials-bg: hsl(219, 30%, 18%);
+  /*Call to action colors*/
+  --cta-cyan: hsl(176, 68%, 64%);
+  --cta-blue: hsl(198, 60%, 50%);
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
+nav {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+nav .logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  padding: 1em;
+}
+
+/*Hero section*/
+.hero {
+  color: white;
+  padding: 2em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero-img {
+  margin-bottom: 2em;
+}
+
+.hero .hero-img img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero .hero-h1 {
+  margin-bottom: 1em;
+  font-size: 1.7em;
+  line-height: 1.6em;
+}
+
+.hero .hero-p {
+  margin-bottom: 2em;
+}
+
+.hero .hero-cta {
+  background: -webkit-gradient(linear, left top, right top, from(var(--cta-cyan)), to(var(--cta-blue)));
+  background: linear-gradient(to right, var(--cta-cyan), var(--cta-blue));
+  padding: 1em;
+  width: 200px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/*Hero section End*/
+/*Features Section*/
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Feature Section End*/
+/*# sourceMappingURL=styles.css.map */
