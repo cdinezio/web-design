@@ -17,6 +17,7 @@
 
 body {
   background-color: var(--main-bg);
+  color: white;
 }
 
 nav {
@@ -95,11 +96,13 @@ nav ul li {
   width: 200px;
   border-radius: 25px;
   font-weight: bold;
+  margin-bottom: 2em;
 }
 
 /*Hero section End*/
 /*Features Section*/
 .features {
+  font-family: 'Open Sans', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +118,12 @@ nav ul li {
           align-items: center;
 }
 
+.features * {
+  margin-bottom: 1em;
+}
+
 .features .feature {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,10 +131,148 @@ nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 1.2em;
+}
+
+.features .feature .icon-feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.features .feature .icon-feature img {
+  width: 50px;
+}
+
+.features .feature .h2-feature {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.features .feature .p-feature {
+  text-align: center;
+}
+
+.features .feature:nth-child(4) {
+  margin-bottom: 3em;
+}
+
 /*Feature Section End*/
+/*How it Works (hiw) Section*/
+.hiw {
+  color: white;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hiw .hiw-img img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hiw .hwi-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+.hiw .hwi-text h2 {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.hiw .hwi-text p {
+  margin-bottom: 1em;
+}
+
+.hiw .hwi-text .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  position: relative;
+  margin-bottom: 9em;
+}
+
+.hiw .hwi-text .link::after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: cyan;
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+}
+
+.hiw .hwi-text a {
+  text-decoration: none;
+  color: var(--cta-cyan);
+  cursor: pointer;
+}
+
+/*How it works End*/
+/*Testimonials Section*/
+.testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.testimonials .testimonial {
+  background-color: var(--testimonials-bg);
+  padding: 2em;
+  width: 70%;
+}
+
+.testimonials .testimonial p {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.testimonials .testimonial .writer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.testimonials .testimonial .writer-box .writer-img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.testimonials .testimonial:nth-child(3) {
+  margin-bottom: 100px;
+}
+
+/*Testimonials End*/
 /*# sourceMappingURL=styles.css.map */
