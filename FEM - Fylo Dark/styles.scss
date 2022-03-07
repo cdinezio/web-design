@@ -59,7 +59,7 @@ nav{
         margin-bottom: 2em;
         img{
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
         }
     }
 
@@ -119,6 +119,7 @@ nav{
 
         .p-feature{
             text-align: center;
+            // padding: 1em;
         }
     }
 }
@@ -270,8 +271,172 @@ nav{
 
 footer{
     background-color: var(--footer-bg);
-    height: 500px;
+    // height: 500px;
     padding-top: 200px;
+
+    .footer-logo{
+        margin: 1em;
+        font-size: 2em;
+    }
+    .company-info{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 2em;
+
+        *{
+            display: flex;
+            gap: 1em;
+            padding: 0.2em;
+        }
+
+        .footer-menu{
+            flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .footer-social{
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        padding-bottom: 1.5em;
+        svg{
+            width: 25px;
+            fill: white;
+        }
+    }
 }
 
 /*Foot end*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 800px) {
+    .features{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .feature{
+            flex-basis: 350px;
+
+        }
+    }
+
+
+    .hiw{
+        flex-direction: row;
+
+        .hiw-img{
+            flex-basis: 100%;
+        }
+
+        .hiw-text{
+            flex-basis: 40%;
+        }
+    }
+
+
+
+footer{
+    .footer-logo{
+        text-align: center;
+        font-size: 2.5em;
+    } 
+    .company-info{ 
+        justify-content: center;
+        .company-location{
+            justify-content: center;
+            p{
+                flex-basis: 50%;
+            }
+        }
+
+        .company-phone{
+            justify-content: center;
+            p{
+                flex-basis: 50%;
+            }
+        }
+
+        .company-email{
+            justify-content: center;
+            p{
+                flex-basis: 50%;
+            }
+        }
+
+        .footer-menu{
+        flex-direction: row;
+        justify-content: space-evenly;
+        }
+    }}
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px){
+
+    .features{
+        max-width: 1440px;
+        margin: 0 auto;
+        
+        .feature{
+            flex-basis: 45%;
+            padding: 0 2em;
+            p{
+                padding: 0 2em;
+            }
+        }
+    }
+
+
+    .hiw{
+        max-width: 1440px;
+        margin: 0 auto 50px;
+        padding: 0 50px;
+
+        .hiw-img{
+            flex-basis: 70%;
+            display: flex;
+            justify-content: center;
+
+            
+        }
+
+        .hwi-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+
+    .testimonial{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .early-access{
+        max-width: 800px;
+    }
+
+}

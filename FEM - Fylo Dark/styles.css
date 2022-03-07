@@ -76,7 +76,7 @@ nav ul li {
 
 .hero .hero-img img {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .hero .hero-h1 {
@@ -321,9 +321,188 @@ nav ul li {
 /*Footer*/
 footer {
   background-color: var(--footer-bg);
-  height: 500px;
   padding-top: 200px;
 }
 
+footer .footer-logo {
+  margin: 1em;
+  font-size: 2em;
+}
+
+footer .company-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+
+footer .company-info * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  padding: 0.2em;
+}
+
+footer .company-info .footer-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .company-info .footer-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1.5em;
+}
+
+footer .footer-social svg {
+  width: 25px;
+  fill: white;
+}
+
 /*Foot end*/
+@media (min-width: 800px) {
+  .features {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .features .feature {
+    -ms-flex-preferred-size: 350px;
+        flex-basis: 350px;
+  }
+  .hiw {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hiw .hiw-img {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .hiw .hiw-text {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  footer .footer-logo {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  footer .company-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .company-info .company-location {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .company-info .company-location p {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  footer .company-info .company-phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .company-info .company-phone p {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  footer .company-info .company-email {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .company-info .company-email p {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  footer .company-info .footer-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .features .feature {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    padding: 0 2em;
+  }
+  .features .feature p {
+    padding: 0 2em;
+  }
+  .hiw {
+    max-width: 1440px;
+    margin: 0 auto 50px;
+    padding: 0 50px;
+  }
+  .hiw .hiw-img {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hiw .hwi-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .testimonial {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .early-access {
+    max-width: 800px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
