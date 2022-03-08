@@ -322,6 +322,11 @@ footer{
 
 
 @media (min-width: 800px) {
+
+    nav{
+        padding: 0 5em;
+    }
+
     .features{
         flex-direction: row;
         flex-wrap: wrap;
@@ -386,6 +391,10 @@ footer{
 
 @media (min-width: 1440px){
 
+    nav{
+        padding: 0 10em;
+    }
+
     .features{
         max-width: 1440px;
         margin: 0 auto;
@@ -434,7 +443,7 @@ footer{
 
 
 @keyframes ctaAnimation{
-    25% { border-radius: 0; box-shadow: 0px 5px 20px white; transform: rotate(1grad); }
+    25% { border-radius: 0; box-shadow: 0px 5px 50px white; transform: rotate(1grad); }
     50% { border-radius: 0; box-shadow: 0px 5px 20px white;}
     75% { border-radius: 0; box-shadow: 0px 5px 20px white; transform: rotate(-1grad);}
 }
