@@ -10,6 +10,7 @@
 /*End variables*/
 body {
   min-height: 100vh;
+  background-color: #f5f3f7;
 }
 
 .body__shape {
@@ -41,9 +42,10 @@ body {
 .hero__cellphone {
   -ms-flex-preferred-size: 300px;
       flex-basis: 300px;
-  height: 500px;
+  height: 600px;
   background-color: white;
-  border: 1px solid black;
+  -webkit-box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -70,9 +72,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 5px;
   gap: 0.5rem;
   font-size: 0.8rem;
+  background-color: #f5f3f7;
+  height: 100%;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
 .hero__cellphone .hero__cellphone_content {
@@ -85,7 +93,7 @@ body {
           flex-direction: column;
   width: 93%;
   height: 97%;
-  gap: 0.4rem;
+  gap: 0rem;
 }
 
 .hero__cellphone .hero__cellphone_content .cellphone_header {
@@ -142,11 +150,99 @@ body {
 .hero__cellphone .hero__cellphone_content .cellphone_msg_light {
   width: 60%;
   background-color: pink;
+  color: #9241c8;
+  font-size: 0.6rem;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone_msg_white {
+  background-color: white;
+  width: 50%;
+  font-size: 0.6rem;
+  color: #6e5d7e;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .hero__cellphone .hero__cellphone_content .cellphone_price {
   width: 80%;
-  background-color: #8838ff;
+  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to right, #e942ff, #8838ff);
+}
+
+.hero__cellphone .hero__cellphone_content .dogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  gap: 10px;
+}
+
+.hero__cellphone .hero__cellphone_content .dogs img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  padding: 9px;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone_price .service_length {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
+  gap: 10px;
+  font-size: 0.6rem;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone_price .shape {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+  opacity: 0.2;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone_price .price {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone__bottom {
+  padding: 1em;
+  width: 90%;
+  background-color: white;
+  margin-top: 1.3em;
+  border-radius: 25px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.hero__cellphone .hero__cellphone_content .cellphone__bottom .send {
+  position: absolute;
+  right: -10px;
+  top: 10%;
+  font-weight: bold;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .msg {
