@@ -2,4 +2,154 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*Variables*/
+$grad-light-magenta: hsl(293, 100%, 63%);
+$grad-light-violet: hsl(264, 100%, 61%);
+
+$paragraph-color: hsl(270, 7%, 64%);
+$ph-color: hsl(206, 6%, 79%);
+$h1-color: hsl(271, 36%, 24%);
+
+/*End variables*/
+
+
+body{
+    min-height: 100vh;
+}
+
+.body__shape{
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 80%;
+    width: 32%;
+    background: linear-gradient(225grad, $grad-light-magenta,$grad-light-violet );
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: -2;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    // background-color: aqua;
+    min-height: 90vh;
+    margin: 0 auto;
+    gap: 150px;
+}
+
+.hero__cellphone{
+    flex-basis: 300px;
+    height: 500px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .messages{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+
+    }
+
+    .hero__cellphone_content{
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        height: 97%;
+        gap: 0.4rem;
+
+
+        .cellphone_header{
+            color: white;
+            border-radius: 25px 25px 0 0;
+            height: 70px;
+            background: linear-gradient(to left,$grad-light-magenta,$grad-light-violet);
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            align-items: flex-end;
+            position: relative;
+            
+            .seller{
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                left: 10%;
+                gap: 1em;
+            }
+
+            .header__photo{
+                width: 25px;
+                height: 25px;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 50%;
+                }
+            }
+
+            .header__text{
+                h2{
+                    font-size: 0.75rem;
+                }
+
+                p{
+                    font-size: 0.5rem;
+                }
+            }
+            
+            
+        }
+
+
+        .cellphone_msg_light{
+            width: 60%;
+            background-color: pink;
+        }
+
+        .cellphone_price{
+            width: 80%;
+            background-color: $grad-light-violet;
+        }
+    }
+
+    
+}
+
+.msg{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    // padding: 0 3em 0 3em;
+    flex-basis: 800px;
+    flex-grow: 1;
+
+    h1{
+        color: $h1-color;
+        font-size: 3em;
+        margin: 0.5em 0;
+    }
+
+    p{
+        color: $paragraph-color;
+        padding: 0 10em 0 0;
+        line-height: 2rem;
+    }
 }
