@@ -15,14 +15,9 @@ body {
   background-color: #082032;
 }
 
-.hero {
-  height: 80vh;
+nav {
   width: 90%;
   margin: 0 auto;
-  padding: 0 5em;
-}
-
-.hero nav {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,17 +32,21 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.hero nav h1 {
+nav h1 {
   display: inline;
   color: rgba(255, 255, 255, 0.8);
   font-size: 3em;
   letter-spacing: 5px;
 }
 
-.hero nav ul {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +60,7 @@ body {
   list-style: none;
 }
 
-.hero nav ul li {
+nav ul li {
   display: inline-block;
   padding: 1em;
   font-size: 1.1em;
@@ -71,7 +70,7 @@ body {
   position: relative;
 }
 
-.hero nav ul li::after {
+nav ul li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -84,12 +83,23 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.hero nav ul li:hover::after {
+nav ul li:hover::after {
   width: 100%;
 }
 
-.hero nav ul li:hover {
+nav ul li:hover {
   color: #FF4C29;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 90vh;
+  margin: 0 auto;
+  padding: 0 5em;
 }
 
 .hero .hero__mainContent {
@@ -138,13 +148,18 @@ body {
   background-color: transparent;
   border: 1px solid #FF4C29;
   font-size: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
 }
 
 .hero .hero__mainContent .hero__text button::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  right: 50%;
   width: 0;
   height: 100%;
   background-color: #FF4C29;
@@ -154,13 +169,15 @@ body {
 }
 
 .hero .hero__mainContent .hero__text button:hover::after {
+  left: 0;
+  right: 100%;
   width: 100%;
 }
 
 .hero .hero__mainContent .hero__text img {
   position: absolute;
   top: 55%;
-  left: 100px;
+  left: 2%;
   -webkit-animation: flecha;
           animation: flecha;
   -webkit-animation-duration: 1s;
@@ -186,6 +203,42 @@ body {
           justify-content: center;
 }
 
+/*About me Section*/
+.about__me .lebenslauf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+}
+
+.about__me .lebenslauf .lebenslauf__card {
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  border: 1px solid white;
+  background-color: black;
+  height: 400px;
+}
+
+/*End About me Section*/
+/*Contact Section*/
+.contact {
+  height: 700px;
+  background-color: red;
+}
+
+/*End Contact Section*/
 @-webkit-keyframes flecha {
   0% {
     -webkit-transform: rotate(90deg);
@@ -196,7 +249,6 @@ body {
             transform: translateY(100px) rotate(90deg);
   }
 }
-
 @keyframes flecha {
   0% {
     -webkit-transform: rotate(90deg);

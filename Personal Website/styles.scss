@@ -31,54 +31,65 @@ body{
     background-color: $mainItems-color;
 }
 
-.hero{
-    height: 80vh;
+nav{
     width: 90%;
     margin: 0 auto;
-    padding: 0 5em;
-    // background-color: black;
-    nav{
-        color: white;
-        @include flexRowCentered();
-        justify-content: space-between;
-        margin-bottom: 5em;
-        h1{
-            display: inline;
-            color: rgba($color: #ffffff, $alpha: 0.8);
-            font-size: 3em;
-            letter-spacing: 5px;
-        }
+    color: white;
+    @include flexRowCentered();
+    justify-content: space-between;
+    margin-bottom: 3em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    h1{
+        display: inline;
+        color: rgba($color: #ffffff, $alpha: 0.8);
+        font-size: 3em;
+        letter-spacing: 5px;
+    }
 
-        ul{
-            @include flexRowCentered();
-            list-style: none;
-            li{
-                display: inline-block;
-                padding: 1em;
-                font-size: 1.1em;
-                cursor: pointer;
-                transition: all 0.5s ease-in-out;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0;
-                    height: 1px;
-                    background-color: $mainText-color;
-                    z-index: -1;
-                    transition: all 0.3s ease-in-out;
-                }
-                &:hover::after{
-                    width: 100%;
-                }
-                &:hover{
-                    color: $mainText-color;
-                }
+    ul{
+        @include flexRowCentered();
+        list-style: none;
+        li{
+            display: inline-block;
+            padding: 1em;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: $mainText-color;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+            &:hover{
+                color: $mainText-color;
             }
         }
     }
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.hero{
+    height: 90vh;
+    // width: 90%;
+    margin: 0 auto;
+    padding: 0 5em;
+    // background-color: black;
+    
     .hero__mainContent{
         @include flexRowCentered();
         .hero__text{
@@ -101,11 +112,14 @@ body{
                 background-color: transparent;
                 border: 1px solid $mainText-color;
                 font-size: 1em;
+                align-self: center;
+                cursor: pointer;
                 &::after{
                     content: "";
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: 50%;
+                    right: 50%;
                     width: 0;
                     height: 100%;
                     background-color: $mainText-color;
@@ -113,14 +127,15 @@ body{
                     z-index: -1;
                 }
                 &:hover::after{
+                    left: 0;
+                    right: 100%;
                     width: 100%;
                 }
             }
             img{
                 position: absolute;
                 top: 55%;
-                // transform: rotate(90deg);
-                left: 100px;
+                left: 2%;
                 animation: flecha;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
@@ -134,6 +149,37 @@ body{
         }
     }
 }
+
+
+/*About me Section*/
+.about__me{
+    // width: 90%;
+    // margin: 0 auto;
+    .lebenslauf{
+        @include flexRowCentered();
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1em;
+        .lebenslauf__card{
+            flex-basis: 400px;
+            border: 1px solid white;
+            background-color: black;
+            height: 400px;
+        }
+    }
+}
+
+/*End About me Section*/
+
+
+/*Contact Section*/
+.contact{
+    height: 700px;
+    background-color: red;
+    // width: 90%;
+    // margin: 0 auto;
+}
+/*End Contact Section*/
 
 
 @keyframes flecha {
