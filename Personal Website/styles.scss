@@ -25,7 +25,8 @@
 $mainItems-color: #082032;
 $subItems-color: #2C394B;
 $details-color: #334756;
-$mainText-color: #FF4C29;
+$mainText-color: #ff6141;
+/*FF4C29*/
 /*Variables End*/
 
 body{
@@ -149,6 +150,8 @@ nav{
             img{
                 max-width: 100%;
                 max-height: 700px;
+                background-repeat: no-repeat;
+                object-fit: cover;
                
             }
         }
@@ -159,7 +162,7 @@ nav{
     height: auto;
     background-color: $mainItems-color;
     box-shadow: 0 0 20px 2px $details-color;
-    margin: 2em 0 10em 0;
+    margin: 2em 0 8em 0;
     @include flexRowCentered();
     justify-content: space-around;
     align-items: center;
@@ -175,20 +178,26 @@ nav{
 /*End Knowledge Section*/
 
 /*About me Section*/
-.about__me{
+.experience{
+    h1:first-child{
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+        padding: 0 0 2.5em 0;
+    }
     .lebenslauf{
         @include flexRowCentered();
         flex-wrap: wrap;
         align-items: center;
         padding: 0 5em;
-        margin-bottom: 5em;
+        margin-bottom: 4em;
         gap: 1em;
         .lebenslauf__card{
             padding: 3em 0 0 0;
             position: relative;
-            flex-basis: 500px;
-            background-color:$details-color;
-            border: 1px solid white;
+            flex-basis: 400px;
+            background-color:$subItems-color;
+            border: 1px solid $mainItems-color;
             min-height: 400px;
             @include flexColumn();
             justify-content: flex-start;
@@ -228,14 +237,57 @@ nav{
 
 
 /*Contact Section*/
-.contact{
-    height: 700px;
-    background-color: red;
-    // width: 90%;
-    // margin: 0 auto;
+.languages{
+    h1:first-child{
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+        padding: 0 0 1em 0;
+    }
+    @include flexColumn();
+    
+    margin: 0 auto;
+    margin-bottom: 4em;
+    .languages__list{
+        @include flexRowCentered();
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .language__box{
+        flex-basis: 300px;
+        min-height: 60px;
+        padding: 1em;
+        background-color: $subItems-color;
+        // outline: 1px solid white;
+        @include flexRowCentered();
+        align-items: center;
+        justify-content: space-around;
+        .language_level{
+            color: $mainText-color;
+        }
+        .language_flag{
+            width: 100px;
+            height: auto;
+            transition: all 0.2s ease-in-out;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 /*End Contact Section*/
 
+
+/*Contact Section*/
+.contact{
+    height: 300px;
+    background-color: $subItems-color;
+}
+/*End contact section*/
 
 @keyframes flecha {
     0%{
@@ -258,6 +310,6 @@ nav{
     }
     100%{
         
-        transform: translateX(500px) rotate(120deg);
+        transform: translateX(420px) rotate(120deg);
     }
 }

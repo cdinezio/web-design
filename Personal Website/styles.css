@@ -10,6 +10,7 @@
 /*Mixins*/
 /*Mixins End*/
 /*Variables*/
+/*FF4C29*/
 /*Variables End*/
 body {
   background-color: #082032;
@@ -77,7 +78,7 @@ nav ul li::after {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #FF4C29;
+  background-color: #ff6141;
   z-index: -1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -88,7 +89,7 @@ nav ul li:hover::after {
 }
 
 nav ul li:hover {
-  color: #FF4C29;
+  color: #ff6141;
 }
 
 .wrapper {
@@ -137,7 +138,7 @@ nav ul li:hover {
 
 .hero .hero__text h1 {
   font-size: 7em;
-  color: #FF4C29;
+  color: #ff6141;
 }
 
 .hero .hero__text button {
@@ -146,7 +147,7 @@ nav ul li:hover {
   color: white;
   position: relative;
   background-color: transparent;
-  border: 1px solid #FF4C29;
+  border: 1px solid #ff6141;
   font-size: 1em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -162,7 +163,7 @@ nav ul li:hover {
   right: 50%;
   width: 0;
   height: 100%;
-  background-color: #FF4C29;
+  background-color: #ff6141;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   z-index: -1;
@@ -206,6 +207,9 @@ nav ul li:hover {
 .hero .hero__image img {
   max-width: 100%;
   max-height: 700px;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Knowledge Section*/
@@ -214,7 +218,7 @@ nav ul li:hover {
   background-color: #082032;
   -webkit-box-shadow: 0 0 20px 2px #334756;
           box-shadow: 0 0 20px 2px #334756;
-  margin: 2em 0 10em 0;
+  margin: 2em 0 8em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +250,14 @@ nav ul li:hover {
 
 /*End Knowledge Section*/
 /*About me Section*/
-.about__me .lebenslauf {
+.experience h1:first-child {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 2.5em 0;
+}
+
+.experience .lebenslauf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,17 +274,17 @@ nav ul li:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 5em;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
   gap: 1em;
 }
 
-.about__me .lebenslauf .lebenslauf__card {
+.experience .lebenslauf .lebenslauf__card {
   padding: 3em 0 0 0;
   position: relative;
-  -ms-flex-preferred-size: 500px;
-      flex-basis: 500px;
-  background-color: #334756;
-  border: 1px solid white;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  background-color: #2C394B;
+  border: 1px solid #082032;
   min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,13 +304,13 @@ nav ul li:hover {
           align-items: center;
 }
 
-.about__me .lebenslauf .lebenslauf__card .lebenslauf__country {
+.experience .lebenslauf .lebenslauf__card .lebenslauf__country {
   position: absolute;
   top: -45px;
   left: 45px;
 }
 
-.about__me .lebenslauf .lebenslauf__card .lebenslauf__firma {
+.experience .lebenslauf .lebenslauf__card .lebenslauf__firma {
   position: absolute;
   top: -40px;
   right: 45px;
@@ -307,12 +318,12 @@ nav ul li:hover {
   height: 80px;
 }
 
-.about__me .lebenslauf .lebenslauf__card .lebenslauf__firma img {
+.experience .lebenslauf .lebenslauf__card .lebenslauf__firma img {
   width: 100%;
   height: auto;
 }
 
-.about__me .lebenslauf .lebenslauf__card .lebenslauf__plane {
+.experience .lebenslauf .lebenslauf__card .lebenslauf__plane {
   position: absolute;
   top: -100px;
   left: 50px;
@@ -326,12 +337,96 @@ nav ul li:hover {
 
 /*End About me Section*/
 /*Contact Section*/
-.contact {
-  height: 700px;
-  background-color: red;
+.languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+.languages h1:first-child {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 1em 0;
+}
+
+.languages .languages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.languages .language__box {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  min-height: 60px;
+  padding: 1em;
+  background-color: #2C394B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.languages .language__box .language_level {
+  color: #ff6141;
+}
+
+.languages .language__box .language_flag {
+  width: 100px;
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.languages .language__box .language_flag img {
+  width: 100%;
+  height: auto;
+}
+
+.languages .language__box .language_flag:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /*End Contact Section*/
+/*Contact Section*/
+.contact {
+  height: 300px;
+  background-color: #2C394B;
+}
+
+/*End contact section*/
 @-webkit-keyframes flecha {
   0% {
     -webkit-transform: rotate(90deg);
@@ -363,8 +458,8 @@ nav ul li:hover {
     left: 100px;
   }
   100% {
-    -webkit-transform: translateX(500px) rotate(120deg);
-            transform: translateX(500px) rotate(120deg);
+    -webkit-transform: translateX(420px) rotate(120deg);
+            transform: translateX(420px) rotate(120deg);
   }
 }
 
@@ -378,8 +473,8 @@ nav ul li:hover {
     left: 100px;
   }
   100% {
-    -webkit-transform: translateX(500px) rotate(120deg);
-            transform: translateX(500px) rotate(120deg);
+    -webkit-transform: translateX(420px) rotate(120deg);
+            transform: translateX(420px) rotate(120deg);
   }
 }
 /*# sourceMappingURL=styles.css.map */
