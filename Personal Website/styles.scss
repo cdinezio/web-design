@@ -10,6 +10,7 @@
 @mixin flexColumn {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 @mixin flexRowCentered {
@@ -84,18 +85,15 @@ nav{
     margin: 0 auto;
 }
 .hero{
-    height: 90vh;
-    // width: 90%;
+    min-height: 72vh;
     margin: 0 auto;
     padding: 0 5em;
-    // background-color: black;
-    
-    .hero__mainContent{
-        @include flexRowCentered();
+    @include flexRowCentered();
+    flex-wrap: wrap;
         .hero__text{
             @include flexColumn();
             flex-basis: 60%;
-            justify-content: center;
+            padding-bottom: 8em;
             p{
                 font-size: 2em;
                 padding: 1em 0;
@@ -146,25 +144,82 @@ nav{
         .hero__image{
             flex-basis: 40%;
             @include flexRowCentered();
+            // background-image: url("/images/profile_pic.JPG");
+            // background-size: auto;
+            img{
+                max-width: 100%;
+                max-height: 700px;
+               
+            }
+        }
+}
+
+/*Knowledge Section*/
+.knowledge{
+    height: auto;
+    background-color: $mainItems-color;
+    box-shadow: 0 0 20px 2px $details-color;
+    margin: 2em 0 10em 0;
+    @include flexRowCentered();
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    svg{
+        transition: all 0.4s ease-in-out;
+        // opacity: 0.5;
+        &:hover{
+            transform: scale(1.2)
         }
     }
 }
-
+/*End Knowledge Section*/
 
 /*About me Section*/
 .about__me{
-    // width: 90%;
-    // margin: 0 auto;
     .lebenslauf{
         @include flexRowCentered();
         flex-wrap: wrap;
-        justify-content: space-between;
+        align-items: center;
+        padding: 0 5em;
+        margin-bottom: 5em;
         gap: 1em;
         .lebenslauf__card{
-            flex-basis: 400px;
+            padding: 3em 0 0 0;
+            position: relative;
+            flex-basis: 500px;
+            background-color:$details-color;
             border: 1px solid white;
-            background-color: black;
-            height: 400px;
+            min-height: 400px;
+            @include flexColumn();
+            justify-content: flex-start;
+            align-items: center;
+
+            .lebenslauf__country{
+                position: absolute;
+                top: -45px;
+                left: 45px;
+            }
+            .lebenslauf__firma{
+                position: absolute;
+                top: -40px;
+                right: 45px;
+                width: 80px;
+                height: 80px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .lebenslauf__plane{
+                position: absolute;
+                top: -100px;
+        left: 50px;
+                // transform: rotate(90deg);
+                animation: plane;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                // animation-direction: alternate-reverse;
+            }
         }
     }
 }
@@ -188,5 +243,21 @@ nav{
     }
     100%{
         transform: translateY(100px) rotate(90deg);
+    }
+}
+
+
+@keyframes plane {
+    0%{ 
+        // transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(90deg);
+        top: -110px;
+        left: 100px;
+    }
+    100%{
+        
+        transform: translateX(500px) rotate(120deg);
     }
 }
