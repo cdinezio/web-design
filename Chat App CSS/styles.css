@@ -1,16 +1,15 @@
 *, *::after, *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 /*Variables*/
 /*End variables*/
 body {
   min-height: 100vh;
-  background-color: #f5f3f7;
+  background-color: hsl(270deg, 20%, 96%);
 }
 
 .body__shape {
@@ -19,19 +18,15 @@ body {
   left: -150px;
   height: 80%;
   width: 32%;
-  background: linear-gradient(225grad, #e942ff, #8838ff);
+  background: linear-gradient(225grad, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   z-index: -2;
 }
 
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 80%;
   max-width: 1200px;
   min-height: 90vh;
@@ -40,176 +35,112 @@ body {
 }
 
 .hero__cellphone {
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  flex-basis: 300px;
   height: 600px;
   background-color: white;
-  -webkit-box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-shrink: 0;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .hero__cellphone .messages {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 5px;
   gap: 0.5rem;
   font-size: 0.8rem;
-  background-color: #f5f3f7;
+  background-color: hsl(270deg, 20%, 96%);
   height: 100%;
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
 }
-
 .hero__cellphone .hero__cellphone_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 93%;
   height: 97%;
   gap: 0rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header {
   color: white;
   border-radius: 25px 25px 0 0;
   height: 70px;
-  background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
-  background: linear-gradient(to left, #e942ff, #8838ff);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: linear-gradient(to left, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1em;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   position: relative;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header .seller {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   left: 10%;
   gap: 1em;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header .header__photo {
   width: 25px;
   height: 25px;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header .header__photo img {
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header .header__text h2 {
   font-size: 0.75rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_header .header__text p {
   font-size: 0.5rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_msg_light {
   width: 60%;
   background-color: pink;
-  color: #9241c8;
+  color: hsl(276deg, 55%, 52%);
   font-size: 0.6rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_msg_white {
   background-color: white;
   width: 50%;
   font-size: 0.6rem;
-  color: #6e5d7e;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  color: hsl(271deg, 15%, 43%);
+  align-self: flex-end;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_price {
   width: 80%;
-  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
-  background: linear-gradient(to right, #e942ff, #8838ff);
+  background: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
 }
-
 .hero__cellphone .hero__cellphone_content .dogs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 40px;
   height: 40px;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   gap: 10px;
 }
-
 .hero__cellphone .hero__cellphone_content .dogs img {
   display: inline-block;
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_price {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: white;
   padding: 9px;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_price .service_length {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   opacity: 0.7;
   gap: 10px;
   font-size: 0.6rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_price .shape {
   width: 15px;
   height: 15px;
@@ -217,12 +148,10 @@ body {
   border: 2px solid white;
   opacity: 0.2;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone_price .price {
   font-weight: bold;
   font-size: 1rem;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone__bottom {
   padding: 1em;
   width: 90%;
@@ -233,7 +162,6 @@ body {
   color: rgba(0, 0, 0, 0.4);
   text-align: left;
 }
-
 .hero__cellphone .hero__cellphone_content .cellphone__bottom .send {
   position: absolute;
   right: -10px;
@@ -251,29 +179,18 @@ body {
 }
 
 .hero__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: 800px;
-      flex-basis: 800px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: column;
+  flex-basis: 800px;
+  flex-grow: 1;
 }
-
 .hero__text h1 {
-  color: #3e2753;
+  color: hsl(271deg, 36%, 24%);
   font-size: 3em;
   margin: 0.5em 0;
 }
-
 .hero__text p {
-  color: #a39daa;
+  color: hsl(270deg, 7%, 64%);
   padding: 0 10em 0 0;
   line-height: 2rem;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

@@ -21,6 +21,7 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
+  text-align: center;
 }
 
 h4 {
@@ -49,15 +50,16 @@ img {
 button.btn-primary {
   width: 12rem;
   padding: 1rem 2rem;
-  background: #dc3545;
+  background: #F05454;
   color: white;
   border: 0;
   font-size: 1rem;
   cursor: pointer;
+  border-radius: 15px;
   transition: all 300ms ease-in-out;
 }
 button.btn-primary:hover {
-  background-color: #dc3545;
+  background-color: #F05454;
   box-shadow: 0px 10px 13px -7px rgba(255, 255, 255, 0.2392156863), 5px 5px 15px 5px rgba(0, 0, 0, 0);
   transform: translateY(-5px);
 }
@@ -74,13 +76,14 @@ section.wrapper {
 section.wrapper aside {
   flex-basis: 235px;
   flex-shrink: 0;
-  background-color: #111;
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   overflow: auto;
   justify-content: center;
   gap: 2rem;
   color: white;
+  transition: all 100ms ease-out;
 }
 section.wrapper aside * {
   max-width: 100%;
@@ -136,7 +139,7 @@ section.wrapper .sidebar-socials > div {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #dc3545;
+  background-color: #30475E;
   cursor: pointer;
 }
 section.wrapper nav .navigation ul.menu {
@@ -170,7 +173,7 @@ section.wrapper nav .navigation ul.menu li a::before {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #dc3545;
+  background-color: #30475E;
   z-index: -1;
   transition: all 300ms ease-in-out;
 }
@@ -178,16 +181,17 @@ section.wrapper nav .navigation ul.menu li a::before {
 main {
   flex-grow: 1;
   overflow-y: scroll;
+  position: relative;
 }
 main section {
   min-height: 100%;
   padding: 2rem 5rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #F5F5F5;
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 main #home {
   color: white;
-  background-image: url(/images/IMG_2131.jpg);
+  background-image: url(../images/IMG_2131.jpg);
   background-position-x: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -214,10 +218,10 @@ main #home .home-text {
   right: 10%;
 }
 main #home .home-text *::-moz-selection {
-  background: #dc3545;
+  background: #30475E;
 }
 main #home .home-text *::selection {
-  background: #dc3545;
+  background: #30475E;
 }
 main #home .home-text .home-text-name {
   position: relative;
@@ -257,22 +261,65 @@ main #home .arrow {
           animation: updown 1s infinite alternate;
 }
 main #about {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+main #about h1 {
+  margin-bottom: 2rem;
 }
 main #about .about-wrapper {
+  min-height: 100%;
+}
+main #about .about-wrapper .about-main-content {
   display: flex;
-  padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-main #about .about-wrapper .about-summary {
-  flex-basis: 50%;
+main #about .about-wrapper .about-main-content .upper-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-main #about .about-wrapper .about-main-text {
-  flex-basis: 30%;
+main #about .about-wrapper .about-main-content .upper-section .card {
+  min-width: 500px;
+  height: 300px;
+  background-color: red;
+  padding: 1rem;
+}
+main #about .about-wrapper .about-main-content .bottom-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main #about .about-wrapper .about-main-content .bottom-section .card {
+  min-width: 500px;
+  height: 300px;
+  background-color: blue;
+  padding: 1rem;
+}
+
+.mobile-menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
 }
 
 .active-link {
-  background-color: #dc3545;
+  background-color: #30475E;
 }
 
 /*=========== ANIMATIONS ===========*/
@@ -344,4 +391,23 @@ main #about .about-wrapper .about-main-text {
     opacity: 1;
   }
 }
-/*=========== END ANIMATIONS ===========*//*# sourceMappingURL=styles.css.map */
+/*=========== END ANIMATIONS ===========*/
+@media (max-width: 900px) {
+  section.wrapper aside {
+    flex-basis: 0px;
+  }
+  section.wrapper .about-main-content .upper-section .card {
+    width: 600px;
+  }
+}
+@media (min-width: 901px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+section.wrapper aside.agrandar {
+  flex-basis: 235px;
+}
+section.wrapper aside.agrandar * {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */
