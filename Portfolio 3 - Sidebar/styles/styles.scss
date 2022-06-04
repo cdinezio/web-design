@@ -306,10 +306,42 @@ section.wrapper{
                         justify-content: center;
                         flex-wrap: wrap;
                         .card{
-                            min-width: 500px;
+                            // min-width: 400px;
+                            max-width: 450px;
                             height: 300px;
-                            background-color: red;
+                            background-color: #e0e0e0;
                             padding: 1rem;
+                            filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.192));
+                            .content_summary{
+                                p{
+                                    font-size: 1rem;
+                                    padding: 0.5rem 0 0.5rem 0;
+                                    text-align: justify;
+                                }
+                            }
+                            .content_technologies{
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                // justify-content: space-around;
+                                gap: 1rem;
+                                align-items: center;
+                                p{
+                                    font-size: 1rem;
+                                    padding: 0.5rem 0 0.5rem 0;
+                                    text-align: justify;
+                                }
+                                .icons{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    gap: 1rem; 
+                                    img{
+                                    width: 50px;
+                                    height: 50px;
+                                    }
+                                }
+                            }
                         }
                     }
                     .bottom-section{
@@ -319,11 +351,90 @@ section.wrapper{
                         justify-content: center;
                         flex-wrap: wrap;
                         .card{
-                            min-width: 500px;
+                            width: 450px;
                             height: 300px;
-                            background-color: blue;
+                            background-color: #e0e0e0;
                             padding: 1rem;
+                            filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.192));
+                        
+                            .content_experience{
+                                display: flex;
+                                flex-direction: column;
+                                p{
+                                    font-size: 1rem;
+                                }
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                                .job_germany{
+                                    .job-header{
+                                    display: flex;
+                                    gap: 0.5rem;
+                                    align-items: center;
+                                    }
+                                    .job-description{
+                                        p{
+                                            font-size: 0.8rem;
+                                        }
+                                    }
+                                    .dates{
+                                        p{
+                                            font-size: 0.8rem;
+                                        }
+                                    }
+                                    .description{
+
+                                    }
+                                }
+                                .job_argentina{
+                                    .job-header{
+                                    display: flex;
+                                    gap: 0.5rem;
+                                    align-items: center;
+                                    }
+                                    .job-description{
+                                        p{
+                                            font-size: 0.8rem;
+                                        }
+                                    }
+                                    .dates{
+                                        p{
+                                            font-size: 0.8rem;
+                                        }
+                                    }
+                                    .description{
+
+                                    }
+
+                                }
+
+                            }
+
+                            .content_languages{
+                                height: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                                align-items: center;
+                                .language{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+
+                                    .flag{
+                                        width: 100px;
+                                        height:100px;
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                }
+                            }
                         }
+                        
                     }
                     // .card{
                     //     flex-basis: 400px;
