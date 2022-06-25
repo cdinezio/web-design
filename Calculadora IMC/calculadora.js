@@ -39,13 +39,36 @@ calculateButton.addEventListener("click", () => {
     h = document.querySelector("#inp-h").value;
     r = Math.round(w / (h/100)**2).toFixed(2);
     if (checkboxFemale.checked) {
-        tmb = (10 * w) + (6.25 * h) - (5 * a) - 161;
+        tmb = Math.round((10 * w) + (6.25 * h) - (5 * a) - 161);
     } else {
-        tmb = (10 * w) + (6.25 * h) - (5 * a) + 5;
+        tmb = Math.round((10 * w) + (6.25 * h) - (5 * a) + 5);
     }
     document.querySelector(".result").innerHTML = `
     <div class="imc">Su IMC es de: ${r}</div>
     <div class="metabolismo">Su metabolismo basal es de: ${tmb} calorias</div>
+    <div class="range-text">Dependiendo de su nivel de actividad, las calorias para mantener el peso son las siguientes:</div>
+    <div class="metabolismo-range">
+        <div class="range">
+            <p>None</p>
+            <p>${Math.round(tmb * none)}</p>
+        </div>
+        <div class="range">
+            <p>Light</p>
+            <p>${Math.round(tmb * light)}</p>
+        </div>
+        <div class="range">
+            <p>Moderate</p>
+            <p>${Math.round(tmb * moderate)}</p>
+        </div>
+        <div class="range">
+            <p>Strong</p>
+            <p>${Math.round(tmb * strong)}</p>
+        </div>
+        <div class="range">
+            <p>Very strong</p>
+            <p>${Math.round(tmb * veryStrong)}</p>
+        </div>
+    </div>
     `
 })
 
