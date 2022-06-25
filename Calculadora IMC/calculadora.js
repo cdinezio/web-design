@@ -49,24 +49,24 @@ calculateButton.addEventListener("click", () => {
     <div class="range-text">Dependiendo de su nivel de actividad, las calorias para mantener el peso son las siguientes:</div>
     <div class="metabolismo-range">
         <div class="range">
-            <p>None</p>
-            <p>${Math.round(tmb * none)}</p>
+            <p>Nulo</p>
+            <p>${Math.round(tmb * none).toLocaleString()} cal</p>
         </div>
         <div class="range">
-            <p>Light</p>
-            <p>${Math.round(tmb * light)}</p>
+            <p>Ligero</p>
+            <p>${Math.round(tmb * light).toLocaleString()} cal</p>
         </div>
         <div class="range">
-            <p>Moderate</p>
-            <p>${Math.round(tmb * moderate)}</p>
+            <p>Moderado</p>
+            <p>${Math.round(tmb * moderate).toLocaleString()} cal</p>
         </div>
         <div class="range">
-            <p>Strong</p>
-            <p>${Math.round(tmb * strong)}</p>
+            <p>Fuerte</p>
+            <p>${Math.round(tmb * strong).toLocaleString()} cal</p>
         </div>
         <div class="range">
-            <p>Very strong</p>
-            <p>${Math.round(tmb * veryStrong)}</p>
+            <p>Muy fuerte</p>
+            <p>${Math.round(tmb * veryStrong).toLocaleString()} cal</p>
         </div>
     </div>
     `
