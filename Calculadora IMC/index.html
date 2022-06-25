@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="header">
+            <h1>Calcule su IMC y su metabolismo basal</h1>
+        </div>
+        <div class="main-content">
+            <div class="gender-section">
+                <div class="gender-img">
+                    <img id="gender-picture" src="./images/sleek.svg" alt="">
+                </div>
+                <div class="radio-inputs">
+                    <input type="radio" id="m" name="gender">Male
+                    <input type="radio" id="f" name="gender" checked>Female
+                </div>
+            </div>
+            <div class="weight-height-age-section">
+                <div class="labels">
+                    <p>Ingrese su edad:</p>
+                    <p>Ingrese su peso (kg):</p>
+                    <p>Ingrese su altura (cm):</p>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="age" id="inp-a" placeholder="25">
+                    <input type="text" name="weight" id="inp-w" placeholder="70">
+                    <input type="text" name="height" id="inp-h" placeholder="160">
+                </div>
+            </div>
+            <button class="calculate">CALCULAR</button>
+            <div class="result"></div>
+        </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
