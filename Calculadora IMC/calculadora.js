@@ -72,3 +72,12 @@ calculateButton.addEventListener("click", () => {
     `
 })
 
+
+
+async function getData(){
+    const response = fetch("https://restcountries.com/v2/all");
+    const data = response.json();
+    return data
+}
+
+getData().then(data => console.log(data))
