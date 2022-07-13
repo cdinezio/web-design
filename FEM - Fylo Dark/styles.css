@@ -267,7 +267,6 @@ footer .footer-social svg {
   nav {
     padding: 0 5em;
   }
-
   .features {
     flex-direction: row;
     flex-wrap: wrap;
@@ -275,7 +274,6 @@ footer .footer-social svg {
   .features .feature {
     flex-basis: 350px;
   }
-
   .hiw {
     flex-direction: row;
   }
@@ -285,7 +283,6 @@ footer .footer-social svg {
   .hiw .hiw-text {
     flex-basis: 40%;
   }
-
   footer .footer-logo {
     text-align: center;
     font-size: 2.5em;
@@ -320,7 +317,6 @@ footer .footer-social svg {
   nav {
     padding: 0 10em;
   }
-
   .features {
     max-width: 1440px;
     margin: 0 auto;
@@ -332,7 +328,6 @@ footer .footer-social svg {
   .features .feature p {
     padding: 0 2em;
   }
-
   .hiw {
     max-width: 1440px;
     margin: 0 auto 50px;
@@ -348,12 +343,10 @@ footer .footer-social svg {
     flex-direction: column;
     justify-content: flex-end;
   }
-
   .testimonial {
     max-width: 1000px;
     margin: 0 auto;
   }
-
   .early-access {
     max-width: 800px;
   }
