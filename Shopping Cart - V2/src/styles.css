@@ -9,6 +9,19 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -123,6 +136,39 @@ i.bi-plus-lg {
   color: white;
   justify-content: center;
   align-items: center;
+}
+
+.order-summary {
+  margin: 7rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.order-summary h3 {
+  padding: 1rem 0 0 0;
+}
+.order-summary .summary-container {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 1rem;
+}
+.order-summary .summary-container .order-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.order-summary .summary-container .order-item .order-img {
+  width: 100%;
+  height: 200px;
+}
+.order-summary .summary-container .order-item .order-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 @media (max-width: 1300px) {

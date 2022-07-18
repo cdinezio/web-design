@@ -1,28 +1,36 @@
-let products = document.querySelector(".products");
 let totalProducts = document.querySelector("#total-products");
+let summaryContainer = document.querySelector(".summary-container");
 let cart = JSON.parse(localStorage.getItem("cartData")) || [];
+let orderTotal = document.querySelector(".order-total");
 
-function generateStore() {
-    products.innerHTML = Products.map((p) => {
-            checkCart = cart.find((x) => x.id === p.id)
-            console.log(checkCart)
-            return `
-            <div class="product ${p.id}">
-                <div class="product-img">
-                    <img src="${p.img}">
+function generateOrderSummary() { 
+    summaryContainer.innerHTML = cart.map((p) => {
+        product = Products.find((x) => x.id === p.id)
+        return `
+        <div class="order-item ${p.id}">
+                <div class="order-img">
+                    <img src="${product.img}">
                 </div>
-                <div class="desc">${p.description}</div>
-                <div class="price">$${p.price}</div>
-                <div class="buttons">
+                <div class="order-price">Price per unit: $${product.price}</div>
+                <div class="order-buttons">
                     <i class="bi bi-dash-lg"></i>
-                    <div id="${p.id}">${checkCart ? checkCart.quantity : 0}</div>
+                    <div id="${p.id}">${p.quantity}</div>
                     <i class="bi bi-plus-lg"></i>
                 </div>
             </div>
-            `
-        }).join("")
+        `
+    }).join("")
 }
-generateStore();
+
+generateOrderSummary();
+
+function updateCartIcon() {
+    totalProducts.innerHTML = cart.map((x) => {
+        return x.quantity;
+    }).reduce((x,y) => x+y,0)
+    
+}
+updateCartIcon();
 
 document.querySelectorAll(".bi-plus-lg").forEach((plus) => {
     plus.addEventListener("click",increaseCart)
@@ -43,6 +51,7 @@ function increaseCart(e) {
     localStorage.setItem("cartData",JSON.stringify(cart))
     updatePage(t);
     updateCartIcon();
+    calculateOrderTotal();
 }
 function reduceCart(e) {
     t = e.target.nextElementSibling.getAttribute("id").toString()
@@ -59,6 +68,7 @@ function reduceCart(e) {
     localStorage.setItem("cartData",JSON.stringify(cart))
     updatePage(t);
     updateCartIcon();
+    calculateOrderTotal();
 }
 function updatePage(id) {
     let inCart = document.getElementById(id);
@@ -70,12 +80,13 @@ function updatePage(id) {
         inCart.innerHTML = 0
     }
 }
-function updateCartIcon() {
-    totalProducts.innerHTML = cart.map((x) => {
-        return x.quantity;
+
+function calculateOrderTotal() {
+    totalPrice = cart.map((x) => {
+        productPrice = Products.find((p) => p.id === x.id).price
+        return x.quantity * productPrice
     }).reduce((x,y) => x+y,0)
-    
+
+    orderTotal.innerHTML = `Your order sums up to: $${totalPrice}`;
 }
-
-updateCartIcon();
-
+calculateOrderTotal();
