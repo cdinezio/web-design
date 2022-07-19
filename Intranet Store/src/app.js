@@ -10,7 +10,7 @@ function generateProducts() {
                 <div class="product-description">${p.description}</div>
                 <img src=${p.img} alt="pc photo" srcset="">
                 <div class="product-price">$${p.price}</div>
-                <div class="cta-cart">Add to cart</div>
+                <div class="cta-cart">Add to Cart</div>
             </div>
             `
     }).join("")

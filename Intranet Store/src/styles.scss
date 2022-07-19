@@ -202,14 +202,15 @@ section.products{
         align-items: center;
         gap: 1rem;
         .product-card{
-            width: 275px;
-            height: 450px;
+            width: 300px;
+            // height: 400px;
             background-color: $main-color;
             text-align: center;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             gap: 0.5rem;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -217,7 +218,10 @@ section.products{
             &:hover{
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                 transition: $transition;
-                transform: scale(1.02);
+                // transform: scale(1.02);
+            }
+            img{
+                width: 200px;
             }
             .product-description{
                 padding: 0.5rem;
@@ -236,8 +240,59 @@ section.products{
                 padding: 0.5rem;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    z-index: -1;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                &:hover::before{
+                    background-color: #0fd69d;
+                    width: 100%;
+                    transition: $transition;
+
+                }
+                &:hover{
+                    font-weight: bold;
+                    // letter-spacing: 2px;
+                    text-transform: uppercase;
+                    transition: all 0.5s ease-in-out
+                }
+                
             }
         }
     }
 }
 //********** END PRODUCTS **********//
+
+
+section.about{
+    margin-top: 2rem;
+    h1{
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .about-cards{
+        padding-top: 2rem;
+        max-width: 75%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        align-content: center;
+        justify-items: center;
+        margin: 0 auto;
+        gap: 1rem;
+        .card{
+            width: 300px;
+            height: 350px;
+            background-color: $secondary-color;
+        }
+    }
+}
